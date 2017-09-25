@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+	<title>mine</title>
+	<style>
+	  *{
+	 	padding:0;
+	 	margin:0;
+	   }  
+	   .head{
+	   	height: 5rem;
+	   }    
+       .top{
+       	width: 7.5rem;
+       	height: 5rem;
+       	position: absolute;
+       	float: left;
+       }
+       .tou{
+       	width:1.85rem;
+       	height:1.85rem;
+        position: absolute;
+        float:left;
+        margin-top: 1.23rem;
+        margin-left: 2.85rem;
+       }
+       .name{
+       	height:0.35rem;
+       	width:1.42rem;
+       	font-size:0.35rem;
+       	color:white;
+       	position:absolute;
+       	margin-top: 3.45rem;
+       	margin-left: 3.05rem;
+       }
+       .content{
+       	width:7.5rem;
+       	height:8.35rem;
+       	background-color: #151a24;
+       }
+       .one{
+       	height:1.5rem;
+       	width:7.5rem;
+       	background-color:#272d3b;
+       }
+       .itema{
+       	float:left;
+       	height:0.86rem;
+       	width:0.82rem;
+       	margin-top: 0.33rem;
+       	margin-left: 0.91rem;
+       }
+       .a{
+          color:white;
+          font-size: 0.44rem;
+          height:0.44rem;
+       }
+       .ab{
+       	color:#686b72;
+       	font-size: 0.2rem;
+       	margin-left: 0.17rem;
+       	margin-top: 0.24rem;
+       }
+       .itemb{
+        float:left;
+       	height:0.86rem;
+       	width:0.82rem;
+       	margin-top: 0.33rem;
+       	margin-left: 1.8rem;
+       }
+       .bb{
+        color:#686b72;
+       	font-size: 0.2rem;
+       	margin-left: 0.03rem;
+       	margin-top: 0.24rem;
+       }
+       .itemc{
+        float:left;
+       	height:0.86rem;
+       	width:0.82rem;
+       	margin-top: 0.33rem;
+       	margin-left: 1.8rem;
+       }
+       .cb{
+       	color:#686b72;
+       	font-size: 0.2rem;
+       	margin-left: 0.07rem;
+       	margin-top: 0.24rem;
+       }
+       .two{
+       	height:3.85rem;
+       	width:7.5rem;
+       	margin-top: 0.2rem;
+       	background-color:#272d3b;
+       }
+       .ta{
+       	height:0.94rem;
+       	width:7.5rem;
+       }
+       .firsta{
+       	
+       	height:0.5rem;
+       	width:0.5rem;
+        float:left;
+        background: url(img/mine_05.png) no-repeat;
+        margin-top:0.29rem;
+        margin-left: 0.23rem;
+       }
+       .second{
+       	border-bottom: 0.01rem solid #151a24;
+       	width:6.61rem;
+       	height:0.95rem;
+       	float:left;
+       	font-size:0.28rem;
+       	line-height: 0.95rem;
+       	color:white;
+       }
+       .thirda{
+       	margin-left:5.11rem;
+       }
+       .firstb{
+       	
+       	height:0.5rem;
+       	width:0.5rem;
+        float:left;
+        background: url(img/mine_12.png) no-repeat;
+        margin-top:0.29rem;
+        margin-left: 0.23rem;
+       }
+       .thirdb{
+       	margin-left:5.62rem;
+       	font-size: 0.18rem;
+       }
+       .firstc{
+       	
+       	height:0.5rem;
+       	width:0.5rem;
+        float:left;
+        background: url(img/mine_14.png) no-repeat;
+        margin-top:0.29rem;
+        margin-left: 0.23rem;
+       }
+       .thirdc{
+       	margin-left:5.32rem;
+       	font-size: 0.18rem;
+       }
+       .firstd{
+       	
+       	height:0.5rem;
+       	width:0.5rem;
+        float:left;
+        background: url(img/mine_16.png) no-repeat;
+        margin-top:0.29rem;
+        margin-left: 0.23rem;
+       }
+       .three{
+       	height: 1.67rem;
+       	width:7.5rem;
+       	background-color:#272d3b; 
+       	margin-top: 0.2rem;
+       }
+       .firste{
+       	
+       	height:0.5rem;
+       	width:0.5rem;
+        float:left;
+        background: url(img/mine_18.png) no-repeat;
+        margin-top:0.29rem;
+        margin-left: 0.23rem;
+       }
+       .firstf{
+       	
+       	height:0.5rem;
+       	width:0.5rem;
+        float:left;
+        background: url(img/mine_20.png) no-repeat;
+        margin-top:0.29rem;
+        margin-left: 0.23rem;
+       }
+       .four{
+       	height:0.98rem;
+       	width:7.5rem;
+       }
+       .fa{
+       	
+       	height:0.75rem;
+       	width:0.51rem;
+       	background: url(img/mine_22.png) no-repeat;
+       	float:left;
+       	margin-top:-0.07rem;
+       	margin-left: 0.62rem;
+       }
+       .faa{
+       	
+       	font-size: 0.22rem;
+       	color:white;
+       	margin-top: 0.34rem;
+       	font-weight: lighter;
+       }
+       .fb{
+       
+       	height:0.75rem;
+       	width:0.49rem;
+       	background: url(img/mine_03.png) no-repeat;
+       	float:left;
+       	margin-top:-0.07rem;
+       	margin-left: 0.98rem;
+       }
+       .fc{
+       
+       	height:0.75rem;
+       	width:0.46rem;
+       	background: url(img/mine_26.png) no-repeat;
+       	float:left;
+       	margin-top:-0.07rem;
+       	margin-left: 0.98rem;
+       }
+       .fd{
+       
+       	height:0.75rem;
+       	width:0.5rem;
+       	background: url(img/mine_28.png) no-repeat;
+       	float:left;
+       	margin-top:-0.07rem;
+       	margin-left: 0.98rem;
+       }
+       .fe{
+       	
+       	height:0.75rem;
+       	width:0.44rem;
+       	background: url(img/mine_30.png) no-repeat;
+       	float:left;
+       	margin-top:-0.07rem;
+       	margin-left: 0.98rem;
+       }
+       .fea{
+       	font-size: 0.22rem;
+       	color:#278ef7;
+       	margin-top: 0.34rem;
+       	font-weight: lighter;
+       }
+	</style>
+	<script type="text/javascript" src="rem.js"></script>
+</head>
+<body>
+
+	<div class="head">
+ 	    <img class="top" src="img/mine_02.png"/> 	   
+ 	    	<img class="tou" src="img/mine_04.png"/>
+ 	    	<span class="name">斯文痞子</span>
+ 	    
+    </div>
+    <div class="content">
+    	<div class="one">
+    		<div class="itema"><div class="a">156</div><div class="ab">收藏</div></div>
+    		<div class="itemb"><div class="a">75</div><div class="bb">订阅</div></div>
+    		<div class="itemc"><div class="a">12</div><div class="cb">发布</div></div>
+    	</div>
+    	<div class="two">
+    		<div class="ta">
+    			<div class="firsta"></div>
+    			<div class="second">最近浏览<img class="thirda" src="img/mine_08.png"></div>
+    		</div>
+    		<div class="ta">
+    			<div class="firstb"></div>
+    			<div class="second">消息<span class="thirdb">10</span></div>
+    		</div>
+    		<div class="ta">
+    			<div class="firstc"></div>
+    			<div class="second">草稿箱<span class="thirdc">10</span></div>
+    		</div>
+    		<div class="ta">
+    			<div class="firstd"></div>
+    			<div class="second">系统设置<img class="thirda" src="img/mine_08.png"></div>
+    		</div>
+    	</div>
+    	<div class="three">
+    		<div class="ta">
+    			<div class="firste"></div>
+    			<div class="second">关于我们<img class="thirda" src="img/mine_08.png"></div>
+    		</div>
+    		<div class="ta">
+    			<div class="firstf"></div>
+    			<div class="second">服务条款<img class="thirda" src="img/mine_08.png"></div>
+    		</div>
+    	</div>
+    	<div class="four">
+    		<div class="fa">
+    			<div class="faa">首页</div>
+    		</div>
+    		<div class="fb">
+    			<div class="faa">热点</div>
+    		</div>
+    		<div class="fc">
+    			<div class="faa">院线</div>
+    		</div>
+    		<div class="fd">
+    			<div class="faa">热图</div>
+    		</div>
+    		<div class="fe">
+    			<div class="fea">我的</div>
+    		</div>
+    	</div>
+    </div>
+
+ 
+</body>
+</html>
