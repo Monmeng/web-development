@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <title>QQinformation</title>
+  
+      <meta charset="utf-8" />
+      <meta name="viewport"content="width=device-width,initial-scale=1">  
+             
+      <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" /> 
+      <script src="js/jquery.js"></script>
+      <script src="js/jquery.mobile-1.4.5.min.js"></script> 
+      <script src="js/jquery-2.2.2.js"></script>
+      <style type="text/css">
+         span{
+          font-size: 11px;
+          color:red;
+         }
+         a{
+            text-decoration: none;
+          }
+         #d{
+          font-size:13px;
+          margin:25%;
+          color:black;
+         }
+         #btn{
+            filter:alpha(Opacity=80);
+            -moz-opacity:0.8;
+            opacity:0.8;
+          }
+      </style>
+</head>
+<body>
+  <div data-role="page" style="background-color:#f4e3c5;">
+    <div data-role="header" style="background-color:#e96c58 ;">
+      <h1>QQ注册</h1>
+    </div>
+    <div data-role="content">
+       
+       <div data-role="fieldcontain">
+          <label for="user" >用户名：</label>
+          <input type="text" name="user" id="user" placeholder="用户名"/><span id="a"></span>
+          <br/>
+          <label for="pwd">密码：</label>
+          <input type="password" name="pwd" id="pwd" placeholder="密码"/><span id="b"></span>
+           <br/>
+          <label for="rpwd">确认密码：</label>
+          <input type="password" name="rpwd" id="rpwd" placeholder="确认密码"/><span id="c"></span>
+        </div> 
+        <a data-role="button" id="btn" style="background-color: #3388cc; color:white;">注册</a>
+        
+    </div> 
+
+    <span id="d">注册即代表阅读并同意<a href=#>服务条款</a></span>
+  </div>
+ <script type="text/javascript">
+   var user=document.getElementById("user");
+   var a=document.getElementById("a");
+   user.onblur=function(){
+    if(user.value!=''){
+      a.innerHTML="正确！"
+    }
+    else{
+      a.innerHTML="*用户名不得为空！"
+    }
+   }
+
+   var pwd=document.getElementById("pwd");
+   var b=document.getElementById("b");
+   pwd.onblur=function(){
+     if(pwd.value.length<6){     
+      b.innerHTML="*密码不得少于6位！";    
+     } 
+     else{
+       b.innerHTML="正确！";
+     }        
+   }
+   var rpwd=document.getElementById("rpwd");
+   var c=document.getElementById("c");
+   rpwd.onblur=function(){
+    if(rpwd.value!=pwd.value){
+      c.innerHTML="*密码不一致！";
+    }
+    else{
+       c.innerHTML="正确！";
+   }
+   }
+   var btn=document.getElementById("btn");
+   $('#btn').click(function(){
+   $.ajax({
+     type:'get',
+     url:' http://datainfo.duapp.com/shopdata/userinfo.php',
+     data:{status:'register',userID:user.value,password:pwd.value},
+     dataType:'json',
+     success:function(data){
+      if(user.value==''){
+        alert('用户名不得为空！');
+      }else{
+        switch(data){
+         case 0:
+           alert("用户名已存在，请重新输入！");
+           break;
+         case 1:
+           if(a.innerHTML=="正确！"&& b.innerHTML=="正确！"&& c.innerHTML=="正确！"){
+             alert("注册成功！按确定键自动跳转到登录界面");
+             window.location="demo-login-QQ.html";    
+           }
+           else{
+              alert("出现错误，请重新输入！");
+           }
+               
+           break;
+         case 2:
+           alert("数据库报错！");
+           break;
+         default:
+           alert("注册失败！");
+           break;
+       }
+      }
+       
+     },
+     error:function(){
+      alert("error");
+     }
+   })
+  })
+  
+ </script>
+</body>
+</html>
